@@ -1,9 +1,8 @@
 public class Tank extends Character{
 
-    private int tankHP;
 
     public int getTankHP(){
-        tankHP = (2*strength)+(7*vitality)+intelligence;
+        int tankHP = (2*strength)+(7*vitality)+intelligence;
         return tankHP;
     }
 

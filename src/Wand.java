@@ -1,10 +1,44 @@
 public class Wand extends Item{
 
-    final  double weightofSilverWand = 0.1;
-    final double weightofGoldenWand = 0.2;
-    final double weightofDiamondWand = 0.3;
+    Healer aHealer = new Healer();
 
-    final int valueofSilverWand = 1;
-    final int valueofGoldenWand = 2;
-    final int valueofDiamondWand = 3;
+    protected int myIntelligence =  aHealer.getIntelligence();
+
+    protected final double weightofWoodenWand = 0.1;
+    protected final double weightofGoldenWand = 0.2;
+    protected final double weightofCaduceus = 0.3;
+
+    protected final int valueofWoodenWand = 2;
+    protected final int valueofGoldenWand = 3;
+    protected final int valueofCaduceus = 5;
+
+    public int calculateDamageofWoodenWand(){
+        int damage = (valueofWoodenWand*myIntelligence)/4;
+        return damage;
+    }
+
+    public int calculateDamageofGoldenWand(){
+        int damage = (valueofGoldenWand*myIntelligence)/4;
+        return damage;
+    }
+
+    public int calculateDamageofCaduceus(){
+        int damage = (valueofCaduceus*myIntelligence)/4;
+        return damage;
+    }
+
+    public int healofWoodenWand(){
+        int heal = (valueofWoodenWand*myIntelligence);
+        return heal;
+    }
+
+    public int healofGoldenWand(){
+        int heal = (valueofGoldenWand*myIntelligence);
+        return heal;
+    }
+
+    public int healofCaduceus(){
+        int heal = (valueofCaduceus*myIntelligence);
+        return heal;
+    }
 }
