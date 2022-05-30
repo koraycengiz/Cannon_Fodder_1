@@ -1,6 +1,7 @@
 public class Enemy extends Character{
 
     private int enemyHP;
+    private boolean isStunned;
 
     public int getEnemyHP(){
         enemyHP = (2*strength)+(7*vitality)+intelligence;
@@ -23,5 +24,10 @@ public class Enemy extends Character{
     public int getIntelligence() {
         intelligence = random.nextInt(5)+1;
         return intelligence;
+    }
+
+    public void setStunStatus(){// will work on this later
+        System.out.println("target succesfully stunned");
+        isStunned = true;
     }
 }
