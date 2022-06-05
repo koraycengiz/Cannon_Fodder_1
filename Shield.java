@@ -16,34 +16,29 @@ public class Shield extends Item{
         return damage;
     }
 
-    public int calculateDamageofRoundShield(Character character){
-        int damage = (valueofRoundShield*character.getVitality())/3;
+    public int calculateDamageofRoundShield(){
+        int damage = (valueofRoundShield*myVitality)/3;
         return damage;
     }
 
-    public int calculateDamageofKiteShield(Character character){
-        int damage = (valueofKiteShield*character.getVitality())/3;
+    public int calculateDamageofKiteShield(){
+        int damage = (valueofKiteShield*myVitality)/3;
         return damage;
     }
 
     //Stun is the number of enemies to stun!
-    public int stunofWoodenShield(Character character){
-        int stun = (valueofWoodenShield*character.getVitality());
+    public int stunofWoodenShield(){
+        int stun = (valueofWoodenShield*myVitality);
         return stun;
     }
 
-    public int stunofRoundShield(Character character){
-        int stun = (valueofRoundShield*character.getVitality());
+    public int stunofRoundShield(){
+        int stun = (valueofRoundShield*myVitality);
         return stun;
     }
 
-    public int stunofKiteShield(Character character){
-        int stun = (valueofKiteShield*character.getVitality());
+    public int stunofKiteShield(){
+        int stun = (valueofKiteShield*myVitality);
         return stun;
-    }
-
-    @Override
-    public int calculateDamage(Character character) {
-        return 0;
     }
 }

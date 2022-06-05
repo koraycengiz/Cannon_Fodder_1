@@ -1,17 +1,23 @@
 public class Fighter extends Character {
 
+
     private int fighterHP;
 
     public int getFighterHP(){
         fighterHP = (2*strength)+(7*vitality)+intelligence;
         return fighterHP;
     }
+    public void setFighterHP(int fighterHP) {
+        this.fighterHP = fighterHP;
+    }
+
 
     @Override
     public int getStrength() {
         strength = random.nextInt(5)+6;
         return strength;
     }
+
 
 
   //start of inventory related codes
@@ -30,9 +36,7 @@ public class Fighter extends Character {
     public void examineItem(){
         super.examineItem();
     }
-    public void equipItem(){
-        super.equipItem();
-    }
+
     public void discardItem(){
         super.discardItem();
     }

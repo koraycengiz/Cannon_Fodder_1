@@ -1,44 +1,36 @@
-public class Sword extends Item{
-    Fighter aFighter = new Fighter();
+public abstract class Sword extends Item{
 
-    protected int myStrength = aFighter.getStrength();
 
-    protected final double weightofShortBlade = 1;
+
     protected final double weightofKatana = 2;
     protected double weightofExcalibur = 3;
 
-    protected int valueofShortBlade = 5;
+
     protected int valueofKatana = 8;
     protected final int valueofExcalibur = 10;
 
 
 
-    public int calculateDamageofShortBlade(){
-        int damage = (valueofShortBlade*myStrength)/5;
+
+    public int calculateDamageofKatana(Character character){
+        int damage = (valueofKatana*character.getStrength())/5;
         return damage;
     }
-    public int calculateDamageofKatana(){
-        int damage = (valueofKatana*myStrength)/5;
-        return damage;
-    }
-    public int calculateDamageofExcalibur(){
-        int damage = (valueofExcalibur*myStrength)/5;
+    public int calculateDamageofExcalibur(Character character){
+        int damage = (valueofExcalibur*character.getStrength())/5;
         return damage;
     }
 
     //Inactivity is the number of enemies to keep away from fighter!
-    public int inactivityofShortBlade(){
-        int inactivity = (valueofShortBlade*myStrength);
+
+
+    public int inactivityofKatana(Character character){
+        int inactivity = (valueofKatana*character.getStrength());
         return inactivity;
     }
 
-    public int inactivityofKatana(){
-        int inactivity = (valueofKatana*myStrength);
-        return inactivity;
-    }
-
-    public int inactivityofExcalibur(){
-        int inactivity = (valueofExcalibur*myStrength);
+    public int inactivityofExcalibur(Character character){
+        int inactivity = (valueofExcalibur*character.getStrength());
         return inactivity;
     }
 

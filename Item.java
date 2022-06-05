@@ -3,6 +3,7 @@ public abstract class Item {
     protected String name;
     protected double weight;
     protected int value;
+    Fighter newFighter = new Fighter();
 
     public void setName(String name){
         this.name = name;
@@ -27,8 +28,6 @@ public abstract class Item {
     public void setValue(int value) {
         this.value = value;
     }
-
-    public abstract int calculateDamage(Character character);
 
     public Item(){}
 
